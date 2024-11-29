@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="860.0" styleClass="bg-color-1" stylesheets="@../style/menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginPageController">
+   <children>
+      <Label layoutX="358.0" layoutY="83.0" text="Login Here" textFill="#1affe1">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="377.0" text="User Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="474.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserId" layoutX="237.0" layoutY="412.0" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="39.0" prefWidth="385.0" style="-fx-background-color: #f8f9f9;" />
+      <JFXButton buttonType="RAISED" layoutX="349.0" layoutY="564.0" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #1757a3;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Line endX="273.0" layoutX="351.0" layoutY="629.0" startX="-115.0" stroke="WHITE" />
+      <Label layoutX="272.0" layoutY="650.0" text="Don't you have an account ?" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="466.0" layoutY="643.0" onAction="#btnRegesterOnAction" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: #1bcf3c;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="260.0" layoutY="39.0" text="The Culinary Acedemy" textFill="#bfedff">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="31.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="239.0" layoutY="507.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="39.0" prefWidth="385.0" />
+      <ImageView fitHeight="207.0" fitWidth="192.0" layoutX="328.0" layoutY="146.0">
+         <image>
+            <Image url="@../icons/academyLOGO.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

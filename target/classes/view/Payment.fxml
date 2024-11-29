@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="720.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
+   <children>
+      <Label layoutX="38.0" layoutY="24.0" text="Payment Management" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="1001.5" endY="-16.0" layoutX="101.0" layoutY="74.0" startX="-101.0" startY="-10.0" />
+      <ImageView fitHeight="53.0" fitWidth="59.0" layoutX="1022.0" layoutY="4.0">
+         <image>
+            <Image url="@../icons/icons8-user-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="116.0" text="Registration Id" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRegistrationId" layoutX="157.0" layoutY="106.0" onAction="#txtSearchOnAction" onKeyReleased="#txtIdKeyAction" prefHeight="43.0" prefWidth="131.0" />
+      <Label layoutX="28.0" layoutY="217.0" text="Down payment" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFinalPayment" layoutX="732.0" layoutY="206.0" onKeyReleased="#txtDurationOnKeyReleased" prefHeight="43.0" prefWidth="337.0" />
+      <TableView fx:id="tblPayment" layoutX="91.0" layoutY="420.0" prefHeight="250.0" prefWidth="809.0">
+        <columns>
+          <TableColumn fx:id="colRegisId" prefWidth="128.0" text="Registration Id" />
+            <TableColumn fx:id="colDownpayment" prefWidth="127.0" text="Down Payment" />
+            <TableColumn fx:id="colBalance" prefWidth="129.0" text="Balance" />
+            <TableColumn fx:id="colFinalinstallment" prefWidth="137.0" text="Final Installment" />
+            <TableColumn fx:id="colPaidDate" prefWidth="287.0" text="Paid date" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="966.0" layoutY="338.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="  PAY" textFill="#f8f8f5">
+         <font>
+            <Font name="Arial Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="980.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-download-50.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="295.0" text="Balance" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="220.0" text="Final Installment" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDownpayment" layoutX="158.0" layoutY="219.0" text="Course Id" textFill="#17202a">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" layoutX="158.0" layoutY="295.0" text="Course Id" textFill="#17202a">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="120.0" text="Date" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateFinalDate" layoutX="732.0" layoutY="106.0" prefHeight="43.0" prefWidth="337.0" />
+   </children>
+</AnchorPane>
